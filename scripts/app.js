@@ -10,7 +10,7 @@ data.map(data => {
   `;
 });
 
-var table = document.querySelector(".table"),
+let table = document.querySelector(".table"),
   ths = table.querySelectorAll("thead th"),
   trs = table.querySelectorAll("tbody tr"),
   df = document.createDocumentFragment(),
