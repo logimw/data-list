@@ -35,26 +35,6 @@ const data = [
     age: 27
   },
   {
-    name: "Jan",
-    surname: "Nowak",
-    age: 38
-  },
-  {
-    name: "Janusz",
-    surname: "Kowalski",
-    age: 63
-  },
-  {
-    name: "Piotr",
-    surname: "Kowal",
-    age: 32
-  },
-  {
-    name: "Piotr",
-    surname: "Stulej",
-    age: 11
-  },
-  {
     name: "Żaneta",
     surname: "Pchaj",
     age: 15
