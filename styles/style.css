@@ -9,3 +9,6 @@ body {
 .btn-container {
   text-align: right;
 }
+thead tr th {
+  cursor: pointer;
+}
