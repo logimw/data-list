@@ -16,6 +16,43 @@
   <body style="background-color: #f0f0f0;">
     <div class="container">
       <div class="row col-sm-12 my-2">
+        <form id="addUser" class="form my-3" method="POST">
+          <div class="form-row d-flex justify-content-between">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                placeholder="Imię"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="surname"
+                id="surname"
+                placeholder="Nazwisko"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="age"
+                id="age"
+                placeholder="Wiek"
+              />
+            </div>
+            <div class="col btn-container">
+              <button id="sendBtn" type="submit" class="btn btn-success">
+                Dodaj osobę
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="row col-11"></div>
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>

@@ -1,14 +1,18 @@
-data.map(data => {
-  // print data from array into dom
-  const row = document.createElement("tr");
-  const root = document.getElementById("root");
-  root.appendChild(row);
-  row.innerHTML = `
-    <td>${data.name}</td>
-    <td>${data.surname}</td>
-    <td>${data.age}</td>
-  `;
-});
+const render = array => {
+  array.map(array => {
+    // print data from array into dom
+    const row = document.createElement("tr");
+    const root = document.getElementById("root");
+    root.appendChild(row);
+    row.innerHTML = `
+      <td>${array.name}</td>
+      <td>${array.surname}</td>
+      <td>${array.age}</td>
+    `;
+  });
+};
+
+render(data);
 
 let table = document.querySelector(".table"),
   ths = table.querySelectorAll("thead th"),
@@ -64,4 +68,32 @@ const sortBy = e => {
 
 tHead.forEach(head => {
   head.addEventListener("click", sortBy);
+});
+
+const form = document.getElementById("addUser");
+const sendBtn = document.getElementById("sendBtn");
+
+sendBtn.addEventListener("click", e => {
+  //e.preventDefault();
+});
+
+form.addEventListener("submit", e => {
+  let formInputs = document.querySelectorAll("#name, #surname, #age");
+  e.preventDefault();
+  console.log(formInputs);
+  let formData = {};
+  Array.from(formInputs);
+  formInputs.forEach(input => {
+    if (input.name === "age") {
+      let age = parseInt(input.value);
+      formData[input.name] = age;
+    } else {
+      formData[input.name] = input.value;
+    }
+    console.log(`${input.name}: ${input.value}`);
+    // input.name === "age" ? parseInt(input.value) : input.name;
+  });
+  console.log(formData);
+  data.push(formData);
+  render(data);
 });
