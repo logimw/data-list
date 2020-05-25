@@ -1,8 +1,9 @@
 const render = array => {
+  const root = document.getElementById("root");
+  root.innerHTML = "";
   array.map(array => {
-    // print data from array into dom
     const row = document.createElement("tr");
-    const root = document.getElementById("root");
+    // print data from array into dom
     root.appendChild(row);
     row.innerHTML = `
       <td>${array.name}</td>
